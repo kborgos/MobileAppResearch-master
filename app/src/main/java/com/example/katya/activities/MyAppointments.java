@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.example.katya.adapters.CustomTodayListViewAdapter;
 import com.example.katya.adapters.CustomUpcomingListViewAdapter;
+import com.example.katya.models.Address;
 import com.example.katya.models.Appointment;
 import com.example.katya.models.Patient;
 import com.example.katya.models.Physician;
@@ -50,8 +51,11 @@ public class MyAppointments extends Activity {
 
         this.patient = new Patient();
 
-        Physician ph1 = new Physician("Pedro", "Rivera", "7870000000", "pedro@algo.com", null, "Ophtalmologist");
-        Physician ph2 = new Physician("Maria", "Perez", "7871111111", "maria@algo.com", null, "Pediatrician");
+        Address add1 = new Address("Calle Flores", "#211", "Añasco", "PR", "00851");
+        Address add2 = new Address("Calle Manantial", "#59", "Ponce", "PR", "00716");
+
+        Physician ph1 = new Physician("Pedro", "Rivera", "7870000000", "pedro@algo.com", add1, "Ophtalmologist");
+        Physician ph2 = new Physician("Maria", "Perez", "7871111111", "maria@algo.com", add2, "Pediatrician");
 
         Appointment app1 = new Appointment("15:00min", "03:00PM", ph1, "Dec/04/14", true, true, true);
         Appointment app2 = new Appointment("00:00min", "01:00PM", ph2, "Dec/11/14", false, true, true);
@@ -59,8 +63,11 @@ public class MyAppointments extends Activity {
         this.patient.addAppointment(app1);
         this.patient.addAppointment(app2);
 
-        Physician ph3 = new Physician("Ernesto", "Nieves", "7870000000", "ernesto@algo.com", null, "Dentist");
-        Physician ph4 = new Physician("Karla", "Jimenez", "7871111111", "karla@algo.com", null, "Neurologist");
+        Address add3 = new Address("Calle Benítez", "#5", "Bayamón", "PR", "00961");
+        Address add4 = new Address("Calle Río Camuy", "#98", "Toa Alta", "PR", "00953");
+
+        Physician ph3 = new Physician("Ernesto", "Nieves", "7870000000", "ernesto@algo.com", add3, "Dentist");
+        Physician ph4 = new Physician("Karla", "Jimenez", "7871111111", "karla@algo.com", add4, "Neurologist");
 
         Appointment app3 = new Appointment("00:00min", "12:00PM", ph3, "Nov/29/14", false, true, false);
         Appointment app4 = new Appointment("00:00min", "10:00AM", ph4, "Nov/29/14", false, false, false);

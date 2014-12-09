@@ -57,6 +57,10 @@ public class UpcomingAppointment extends Activity {
         TextView email = (TextView) findViewById(R.id.physicianEmail);
         email.setText(appointment.getSpecialist().getEmail());
 
+        //sets physician's physical address
+        TextView address = (TextView) findViewById(R.id.physicianAddress);
+        address.setText(appointment.getSpecialist().getAddress().toString());
+
         //sets physician's phone
         TextView phone = (TextView) findViewById(R.id.physicianPhone);
         phone.setText(appointment.getSpecialist().getPhoneNumber());
@@ -76,7 +80,7 @@ public class UpcomingAppointment extends Activity {
      */
     private AlertDialog.Builder getDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Cancel appointment?");
+        builder.setMessage("Would you like to cancel this appointment?");
         builder.setCancelable(true);
         builder.setPositiveButton("Yes",
                 new DialogInterface.OnClickListener() {

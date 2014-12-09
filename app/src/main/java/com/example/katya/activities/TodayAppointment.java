@@ -65,6 +65,10 @@ public class TodayAppointment extends Activity {
         TextView email = (TextView) findViewById(R.id.physicianEmail);
         email.setText(appointment.getSpecialist().getEmail());
 
+        //sets physician's physical address
+        TextView address = (TextView) findViewById(R.id.physicianAddress);
+        address.setText(appointment.getSpecialist().getAddress().toString());
+
         //sets physician's phone
         TextView phone = (TextView) findViewById(R.id.physicianPhone);
         phone.setText(appointment.getSpecialist().getPhoneNumber());
@@ -88,7 +92,7 @@ public class TodayAppointment extends Activity {
      */
     private AlertDialog.Builder getDialog(){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Check In?");
+        builder.setMessage("Would you like to check in?");
         builder.setCancelable(true);
         builder.setPositiveButton("Yes",
                 new DialogInterface.OnClickListener() {
@@ -101,10 +105,7 @@ public class TodayAppointment extends Activity {
                             //update UI
                             TodayAppointment.this.menu.findItem(R.id.action_check_in).setVisible(false);
                             TodayAppointment.this.status.setText("Checked In");
-
-//                            Intent intent = new Intent(TodayAppointment.this, MyAppointments.class);
-//                            intent.putExtra("Patient", TodayAppointment.this.patient);
-//                            startActivity(intent);
+                            dialog.cancel();
                         }
 
                         // alert the patient that they have checked in successfully
@@ -113,6 +114,10 @@ public class TodayAppointment extends Activity {
                         alertDialog.setMessage("You are now checked in.");
                         alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
+                                //go back and update patient
+                                Intent intent = new Intent(TodayAppointment.this, MyAppointments.class);
+                                intent.putExtra("Patient", TodayAppointment.this.patient);
+                                startActivity(intent);
                             }
                         });
 
