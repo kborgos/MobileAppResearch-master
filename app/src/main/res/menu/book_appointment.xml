@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MyAppointments" >
+    <item android:id="@+id/action_find_physician"
+        android:icon="@drawable/find"
+        android:title="findDoc"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_settings"
+        android:icon="@drawable/find"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+</menu>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0dcdc">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/my_physicians"
+        android:id="@+id/myPhysiciansText"
+        android:background="#fbfbfb"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Name                               Specialist"
+        android:id="@+id/myPhysiciansTable"
+        android:layout_gravity="center_horizontal"
+        android:background="#929292"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/myPhysiciansListView"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

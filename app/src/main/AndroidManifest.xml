@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.katya.activities" >
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/healthcareimg"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.katya.activities.MyAppointments"
+            android:label="My Appointments" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.katya.activities.BookAppointment"
+            android:label="Book Appointment"
+            android:parentActivityName="com.example.katya.activities.MyAppointments" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.katya.activities.MyAppointments" />
+        </activity>
+        <activity
+            android:name="com.example.katya.activities.TodayAppointment"
+            android:label="Appointment"
+            android:parentActivityName="com.example.katya.activities.MyAppointments" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.katya.activities.MyAppointments" />
+        </activity>
+        <activity
+            android:name="com.example.katya.activities.UpcomingAppointment"
+            android:label="Appointment"
+            android:parentActivityName="com.example.katya.activities.MyAppointments" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.katya.activities.MyAppointments" />
+        </activity>
+        <activity
+            android:name="com.example.katya.activities.FindPhysician"
+            android:label="Find a Physician"
+            android:parentActivityName="com.example.katya.activities.BookAppointment" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.katya.activities.BookAppointment" />
+        </activity>
+        <activity
+            android:name="com.example.katya.activities.NewAppointment"
+            android:label="New Appointment"
+            android:parentActivityName="com.example.katya.activities.BookAppointment" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.katya.activities.BookAppointment" />
+        </activity>
+    </application>
+
+</manifest>

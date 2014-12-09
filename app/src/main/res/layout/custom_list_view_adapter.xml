@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/ets"
+        android:text="00:00min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/hourlabel"
+        android:text="00:00AM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/ets"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/specialistlabel"
+        android:text="Somethingologist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/hourlabel"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="25dp"
+        android:textSize="20dp" />
+
+</RelativeLayout>
